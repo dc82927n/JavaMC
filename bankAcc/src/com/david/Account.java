@@ -7,6 +7,36 @@ public class Account {
     private String customerEmailAddress;
     private String getCustomerNumber;
 
+    // we create this constructor to demostrate we can call one constructor call another constructor.
+    // this is useful when we want to use some default values. aka we can overload constructors.
+     public Account(){
+        // this keyword is special that i calling another constructor with these parameters.
+        this("56283", 2.50, "default name", "default address", "default phone");
+
+        System.out.println("empty constructor called");
+    }
+    public Account(String number, double balance,  String customerName, String customerEmailAddress, String getCustomerNumber){
+        System.out.println("Account constructor with parameter called");
+        this.number = number;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.customerEmailAddress = customerEmailAddress;
+        this.getCustomerNumber = getCustomerNumber;
+
+    }
+
+
+    // this is allowing us to set new parameter. basically we are overloading again.
+    // on the java main we are going to create a new account name time and will pass in these
+    // optional parameters.
+
+    public Account(String customerName, String customerEmailAddress, String getCustomerNumber) {
+         this("9999", 10.555, customerName, customerEmailAddress, getCustomerNumber);
+        this.customerName = customerName;
+        this.customerEmailAddress = customerEmailAddress;
+        this.getCustomerNumber = getCustomerNumber;
+    }
+
     // this is a function
     public void deposit(double depositAmount){
         this.balance += depositAmount;
@@ -22,6 +52,7 @@ public class Account {
     public void deposit(double depositAmount){
         balance += depositAmount;
     }*/
+
     public void withdrawl(double withdrawalAmount){
         if(this.balance - withdrawalAmount < 0){
             System.out.println("Only " + this.balance + " Available. Withdrawl no processed");

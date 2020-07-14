@@ -5,21 +5,25 @@ public class Floor {
     private double length;
 
     // function
-    public getArea (){
+    public double getArea() {
         return width * length;
     }
 
     //constructor
-
-
     public Floor (double width, double length){
-        if(width <= 0 || lengt <= 0){
-            return 0;
-    }
+        if(width < 0) {
+            this.width = 0;
+        } else {
+            this.width = width;
+        }
 
-    public Floor(double width, double length) {
-        this.width = width;
-        this.length = length;
+        if(length < 0) {
+            this.length = 0;
+        } else {
+            this.length = length;
+        }
+
+
     }
 
     public double getWidth() {
@@ -29,10 +33,4 @@ public class Floor {
     public double getLength() {
         return length;
     }
-
-
-
-
-
-
 }

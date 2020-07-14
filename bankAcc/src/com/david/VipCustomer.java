@@ -6,7 +6,7 @@ public class VipCustomer {
    private String emailAddress;
 
    public VipCustomer(){
-        // we are setting the defaults for other contrutors we create.
+        // we are setting the defaults for other constructors we create.
        this("Defualt name", 50000.00, "defautl email");
    }
 

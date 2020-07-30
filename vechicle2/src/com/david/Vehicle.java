@@ -27,6 +27,10 @@ public class Vehicle {
         System.out.println("currentDirection and velocity " + currentDirection + " " + currentVelocity);
     }
 
+    public void stop(){
+        this.currentVelocity = 0;
+    }
+
     public String getName() {
         return name;
     }

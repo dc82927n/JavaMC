@@ -34,5 +34,7 @@ public class Bedroom {
     }
 
 
-
+    public Ceiling getCeiling() {
+        return ceiling;
+    }
 }

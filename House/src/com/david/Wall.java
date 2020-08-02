@@ -13,7 +13,7 @@ public class Wall {
         return direction;
     }
 
-    
+
 
 
 
